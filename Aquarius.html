@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Profesional - (Nama Lengkap)</title>
+    <!-- Memuat Tailwind CSS dan Font Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icon Placeholder: Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        /* Menggunakan font Inter secara default dan memastikan scroll halus */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f9fafb; /* Abu-abu Sangat Terang */
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease-in-out;
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .accent-color {
+            color: #1e3a8a; /* Biru Tua */
+        }
+        .bg-accent {
+            background-color: #1e3a8a; /* Biru Tua */
+        }
+        .hover-bg-accent:hover {
+            background-color: #1d4ed8; /* Biru yang sedikit lebih terang untuk hover */
+        }
+    </style>
+</head>
+<body onload="lucide.createIcons()">
+
+    <!-- Navigasi Bar (Sticky) -->
+    <nav class="sticky-nav bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Nama -->
+                <a href="#beranda" class="text-2xl font-extrabold accent-color">(Nama Lengkap)</a>
+                <!-- Tautan Navigasi (Desktop) -->
+                <div class="hidden md:ml-6 md:flex md:space-x-8 text-gray-700">
+                    <a href="#beranda" class="hover:accent-color px-3 py-2 font-medium">Beranda</a>
+                    <a href="#pengalaman" class="hover:accent-color px-3 py-2 font-medium">Pengalaman</a>
+                    <a href="#keahlian" class="hover:accent-color px-3 py-2 font-medium">Keahlian</a>
+                    <a href="#portofolio" class="hover:accent-color px-3 py-2 font-medium">Portofolio</a>
+                    <a href="#kontak" class="hover:accent-color px-3 py-2 font-medium">Kontak</a>
+                </div>
+                <!-- Tombol Mobile (Disembunyikan, memerlukan JS untuk fungsi penuh) -->
+                <button class="md:hidden p-2 text-gray-600 hover:accent-color">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. HERO SECTION (Identitas) -->
+        <section id="beranda" class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+                <!-- Teks Utama -->
+                <div class="lg:w-3/5 text-center lg:text-left">
+                    <p class="text-xl font-medium text-gray-500 mb-2">Halo, Saya</p>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+                        <span class="accent-color">(Nama Lengkap)</span>
+                    </h1>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-semibold accent-color">
+                        [Jabatan/Profesi Utama Anda]
+                    </h2>
+                    <p class="mt-6 text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
+                        "Membangun Solusi Digital yang Berdampak dan Berfokus pada Pengalaman Pengguna."
+                    </p>
+                    <div class="mt-8 flex justify-center lg:justify-start space-x-4">
+                        <a href="#kontak" class="px-8 py-3 bg-accent text-white font-semibold rounded-full shadow-lg hover-bg-accent transition duration-300">
+                            Mari Berkolaborasi
+                        </a>
+                        <!-- Link ke CV PDF (Optional second page/file) -->
+                        <a href="[URL_CV_Anda.pdf]" download class="px-8 py-3 border border-accent accent-color font-semibold rounded-full hover:bg-gray-100 transition duration-300">
+                            Unduh CV (PDF)
+                        </a>
+                    </div>
+                </div>
+                <!-- Foto Profil -->
+                <div class="lg:w-2/5">
+                    <img src="https://placehold.co/400x400/1e3a8a/FFFFFF?text=Foto+Profil" alt="Foto Profesional (Nama Lengkap)" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-2xl ring-4 ring-gray-200">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TENTANG SAYA -->
+        <section id="tentang" class="section-padding bg-gray-50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                        [Paragraf 1: Jelaskan siapa Anda dan keahlian utama Anda. Contoh: Saya (Nama Lengkap), seorang [Jabatan] dengan pengalaman lebih dari [X] tahun dalam [bidang utama]. Saya bersemangat untuk menggunakan keterampilan teknis dan kreatif saya untuk memecahkan masalah kompleks.]
+                    </p>
+                    <p>
+                        [Paragraf 2: Fokus pada *passion* dan tujuan karir. Contoh: Tujuan karir saya adalah menjadi pemimpin yang berdampak dalam bidang [bidang karir], mendorong inovasi, dan membangun tim yang kuat. Saya selalu mencari peluang untuk belajar teknologi baru dan berkontribusi pada proyek yang membuat perbedaan nyata.]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PENGALAMAN KERJA -->
+        <section id="pengalaman" class="section-padding bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Pengalaman Kerja</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+                
+                <div class="space-y-10 relative">
+                    <!-- Garis Waktu Vertikal (Hanya untuk visual) -->
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 hidden md:block"></div>
+
+                    <!-- Item Pengalaman 1 (Paling Terbaru) -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+                        <div class="md:w-5/12 p-4 bg-gray-50 rounded-xl shadow-md border-l-4 border-accent md:border-none md:text-right">
+                            <span class="text-sm font-semibold text-gray-500">[Tahun Mulai] - [Saat Ini]</span>
+                        </div>
+                        <div class="hidden md:block w-1/12 text-center relative">
+                            <div class="w-4 h-4 bg-accent rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ring-4 ring-white shadow-lg"></div>
+                        </div>
+                        <div class="md:w-5/12 p-6 md:p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-accent md:border-l-0 mt-4 md:mt-0">
+                            <h3 class="text-2xl font-semibold text-gray-900">[Posisi Jabatan]</h3>
+                            <p class="text-lg accent-color mt-1">[Nama Perusahaan/Tempat Kerja]</p>
+                            <p class="text-gray-600 mt-3 text-sm">[Deskripsi Singkat: Bertanggung jawab atas X, menghasilkan peningkatan Y, menggunakan teknologi Z.]</p>
+                        </div>
+                    </div>
+
+                    <!-- Item Pengalaman 2 -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+                         <div class="md:w-5/12 order-3 md:order-1 p-6 md:p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-accent md:border-l-0">
+                            <h3 class="text-2xl font-semibold text-gray-900">[Posisi Jabatan Sebelumnya]</h3>
+                            <p class="text-lg accent-color mt-1">[Nama Perusahaan Sebelumnya]</p>
+                            <p class="text-gray-600 mt-3 text-sm">[Deskripsi Singkat: Mengelola tim A, mencapai target B, dalam periode C.]</p>
+                        </div>
+                        <div class="hidden md:block w-1/12 text-center order-2 relative">
+                            <div class="w-4 h-4 bg-accent rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ring-4 ring-white shadow-lg"></div>
+                        </div>
+                        <div class="md:w-5/12 order-1 md:order-3 p-4 bg-gray-50 rounded-xl shadow-md border-l-4 border-accent md:border-none md:text-left mt-4 md:mt-0">
+                            <span class="text-sm font-semibold text-gray-500">[Tahun Mulai] - [Tahun Selesai]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PENDIDIKAN -->
+        <section id="pendidikan" class="section-padding bg-gray-50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Pendidikan Formal</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Item Pendidikan 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent">
+                        <h3 class="text-xl font-bold text-gray-900">[Gelar/Jenjang Pendidikan]</h3>
+                        <p class="text-lg accent-color mt-1">[Nama Institusi/Universitas]</p>
+                        <p class="text-sm text-gray-600 mt-2">Lulus Tahun [YYYY]</p>
+                        <p class="text-gray-500 mt-3 text-sm">[Jurusan, Fokus Studi, atau IPK (opsional)]</p>
+                    </div>
+
+                    <!-- Item Pendidikan 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent">
+                        <h3 class="text-xl font-bold text-gray-900">[Gelar/Jenjang Pendidikan Sebelumnya]</h3>
+                        <p class="text-lg accent-color mt-1">[Nama Institusi/Sekolah]</p>
+                        <p class="text-sm text-gray-600 mt-2">Lulus Tahun [YYYY]</p>
+                        <p class="text-gray-500 mt-3 text-sm">[Jurusan (opsional)]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. KEAHLIAN (SKILLS) -->
+        <section id="keahlian" class="section-padding bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Keahlian Utama</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Keahlian Teknis (Hard Skills) - Simulasi Bar Chart -->
+                    <div>
+                        <h3 class="text-2xl font-bold accent-color mb-6 flex items-center"><i data-lucide="code" class="w-6 h-6 mr-2"></i> Hard Skills (Teknis)</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
+                                    <span>[Contoh: JavaScript/React]</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-accent h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
+                                    <span>[Contoh: UI/UX Figma]</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
+                                    <span>[Contoh: Python/Data Science]</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-accent h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <!-- Tambahkan lebih banyak skills di sini -->
+                        </div>
+                    </div>
+
+                    <!-- Keahlian Non-Teknis (Soft Skills) - List Badge -->
+                    <div>
+                        <h3 class="text-2xl font-bold accent-color mb-6 flex items-center"><i data-lucide="users" class="w-6 h-6 mr-2"></i> Soft Skills (Non-Teknis)</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full shadow-md">Kepemimpinan</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full shadow-md">Komunikasi Efektif</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full shadow-md">Manajemen Waktu</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full shadow-md">Penyelesaian Masalah</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full shadow-md">Adaptabilitas</span>
+                            <!-- Tambahkan soft skills lainnya -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PORTOFOLIO -->
+        <section id="portofolio" class="section-padding bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Portofolio Pilihan</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kartu Proyek 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.03] duration-300 border border-gray-200">
+                        <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Proyek+Aplikasi+Web" alt="[Nama Proyek 1]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">[Nama Proyek 1]</h3>
+                            <p class="text-sm accent-color mt-1">[Kategori: Web Development]</p>
+                            <p class="text-gray-600 mt-3 text-sm">[Deskripsi: Solusi e-commerce dengan integrasi pembayaran. Menggunakan React dan Node.js.]</p>
+                            <a href="https://de.wikipedia.org/wiki/DEMO" target="_blank" class="mt-4 inline-block text-accent font-semibold hover:text-indigo-800 flex items-center">
+                                Lihat Proyek <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Proyek 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.03] duration-300 border border-gray-200">
+                        <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Studi+Kasus+UI%2FUX" alt="[Nama Proyek 2]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">[Nama Proyek 2]</h3>
+                            <p class="text-sm accent-color mt-1">[Kategori: UI/UX Design]</p>
+                            <p class="text-gray-600 mt-3 text-sm">[Deskripsi: Redesain aplikasi mobile untuk meningkatkan retensi pengguna sebesar 15%. Dibuat di Figma.]</p>
+                            <a href="https://repository.umy.ac.id/bitstream/handle/123456789/10853/L.%20NASKAH%20PUBLIKASI%20LAMPIRAN.pdf?sequence=12&isAllowed=y" target="_blank" class="mt-4 inline-block text-accent font-semibold hover:text-indigo-800 flex items-center">
+                                Lihat Proyek <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Proyek 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.03] duration-300 border border-gray-200">
+                        <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Laporan+Analisis+Data" alt="[Nama Proyek 3]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">[Nama Proyek 3]</h3>
+                            <p class="text-sm accent-color mt-1">[Kategori: Data Analytics]</p>
+                            <p class="text-gray-600 mt-3 text-sm">[Deskripsi: Laporan triwulanan tentang tren pasar yang menghasilkan rekomendasi strategis.]</p>
+                            <a href="https://www.scribd.com/doc/181894608/Format-Laporan" target="_blank" class="mt-4 inline-block text-accent font-semibold hover:text-indigo-800 flex items-center">
+                                Lihat Proyek <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SERTIFIKASI (Opsional) -->
+        <section id="sertifikasi" class="section-padding bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Sertifikasi & Pelatihan</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Item Sertifikasi 1 -->
+                    <div class="p-5 bg-gray-50 rounded-xl shadow-md border-b-4 border-indigo-400">
+                        <h4 class="text-lg font-semibold text-gray-900">Certified [Nama Sertifikasi]</h4>
+                        <p class="text-sm text-gray-600 mt-1">[Penyedia/Institusi]</p>
+                        <p class="text-xs text-accent mt-2">Diterbitkan [Bulan, Tahun]</p>
+                    </div>
+                    <!-- Item Sertifikasi 2 -->
+                    <div class="p-5 bg-gray-50 rounded-xl shadow-md border-b-4 border-indigo-400">
+                        <h4 class="text-lg font-semibold text-gray-900">Professional [Nama Pelatihan]</h4>
+                        <p class="text-sm text-gray-600 mt-1">[Penyedia/Institusi]</p>
+                        <p class="text-xs text-accent mt-2">Diterbitkan [Bulan, Tahun]</p>
+                    </div>
+                    <!-- Item Sertifikasi 3 -->
+                    <div class="p-5 bg-gray-50 rounded-xl shadow-md border-b-4 border-indigo-400">
+                        <h4 class="text-lg font-semibold text-gray-900">[Sertifikasi Lainnya]</h4>
+                        <p class="text-sm text-gray-600 mt-1">[Penyedia/Institusi]</p>
+                        <p class="text-xs text-accent mt-2">Diterbitkan [Bulan, Tahun]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 8. TESTIMONI/REKOMENDASI (Opsional) -->
+        <section id="testimoni" class="section-padding bg-gray-50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Apa Kata Mereka</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimoni 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500">
+                        <i data-lucide="quote" class="w-8 h-8 accent-color mb-3"></i>
+                        <p class="italic text-gray-700 text-base">"[Kutipan Testimoni 1: (Nama Lengkap) adalah aset yang luar biasa bagi tim. Keterampilannya dalam [bidang] sangat menonjol.]"</p>
+                        <p class="mt-4 font-semibold text-gray-900">-[Nama Pemberi Testimoni]</p>
+                        <p class="text-sm text-gray-600">[Jabatan/Relasi]</p>
+                    </div>
+                    <!-- Testimoni 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500">
+                        <i data-lucide="quote" class="w-8 h-8 accent-color mb-3"></i>
+                        <p class="italic text-gray-700 text-base">"[Kutipan Testimoni 2: Saya sangat terkesan dengan etos kerja dan kemampuan [Nama Lengkap] untuk mengatasi tantangan teknis.]"</p>
+                        <p class="mt-4 font-semibold text-gray-900">-[Nama Pemberi Testimoni]</p>
+                        <p class="text-sm text-gray-600">[Jabatan/Relasi]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. KONTAK -->
+        <section id="kontak" class="section-padding bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Hubungi Saya</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-12 rounded"></div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Tombol dan Sosial Media -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold accent-color mb-4">Opsi Kontak Cepat</h3>
+                        
+                        <!-- Tombol WhatsApp/Email -->
+                        <a href="https://wa.me/[NomorWhatsAppAnda]?text=Halo%20saya%20tertarik%20dengan%20profil%20Anda" target="_blank" class="w-full flex items-center justify-center p-4 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition duration-300">
+                            <i data-lucide="message-square" class="w-5 h-5 mr-3"></i> Kirim Pesan via WhatsApp
+                        </a>
+                        <a href="mailto:[EmailAnda]" class="w-full flex items-center justify-center p-4 bg-gray-700 text-white font-bold rounded-lg shadow-lg hover:bg-gray-800 transition duration-300">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3"></i> Kirim Email Langsung
+                        </a>
+
+                        <!-- Sosial Media -->
+                        <div class="pt-4">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-3">Tautan Profesional</h4>
+                            <div class="flex space-x-6 justify-center md:justify-start">
+                                <a href="https://www.linkedin.com/company/anda-us" target="_blank" class="text-gray-500 hover:accent-color transition duration-300">
+                                    <i data-lucide="linkedin" class="w-8 h-8"></i>
+                                </a>
+                                <a href="https://github.com/ldclabs/anda" target="_blank" class="text-gray-500 hover:accent-color transition duration-300">
+                                    <i data-lucide="github" class="w-8 h-8"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ananda.insta/" target="_blank" class="text-gray-500 hover:accent-color transition duration-300">
+                                    <i data-lucide="instagram" class="w-8 h-8"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulir Kontak (Static HTML) -->
+                    <div>
+                        <h3 class="text-2xl font-semibold accent-color mb-4">Kirim Pesan</h3>
+                        <form class="space-y-4 bg-gray-50 p-6 rounded-xl shadow-inner">
+                            <div>
+                                <label for="form-nama" class="block text-sm font-medium text-gray-700">Nama</label>
+                                <input type="text" id="form-nama" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-indigo-500 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="form-email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="form-email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-indigo-500 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="form-pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
+                                <textarea id="form-pesan" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow-md hover-bg-accent transition duration-300">
+                                Kirim
+                            </button>
+                        </form>
+                        <p class="text-xs text-red-500 mt-2 text-center">
+                            *Catatan: Formulir ini adalah contoh dan tidak memiliki fungsi pengiriman data tanpa layanan backend.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2025 (Nama Lengkap). Semua Hak Dilindungi. Desain oleh Gemini.</p>
+        </div>
+    </footer>
+</body>
+</html>
